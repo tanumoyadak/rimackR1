@@ -1,14 +1,23 @@
-let signup = document.querySelector(".signup");
-let login = document.querySelector(".login");
-let slider = document.querySelector(".slider");
-let formSection = document.querySelector(".form-section");
+const sign_in_btn = document.querySelector("#sign-in-btn");
+const sign_up_btn = document.querySelector("#sign-up-btn");
+const container = document.querySelector(".container");
 
-signup.addEventListener("click", () => {
-	slider.classList.add("moveslider");
-	formSection.classList.add("form-section-move");
+sign_up_btn.addEventListener("click", () => {
+  container.classList.add("sign-up-mode");
 });
 
-login.addEventListener("click", () => {
-	slider.classList.remove("moveslider");
-	formSection.classList.remove("form-section-move");
+sign_in_btn.addEventListener("click", () => {
+  container.classList.remove("sign-up-mode");
 });
+
+	$("#signin").submit(function () { 
+		alert("Hello! I am an ale");
+		$("#loginusername").attr("placeholder", "Search for a title or");
+		alert("ok!");/*
+		$.post("data.txt", { name: "GFG" }, function (data, status) { 
+			document.getElementById("loginpassword").placeholder = data; 
+			document.getElementById("loginusername").placeholder = "Tanumoy"; 
+		}); 
+		*/
+	}); 
+  

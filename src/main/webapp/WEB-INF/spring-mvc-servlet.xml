@@ -7,6 +7,9 @@
         <property name="prefix" value="/html/" />
         <property name="suffix" value=".html" />
         <property name="suffix" value=".js" />
+        <property name="suffix" value=".svg" />
+        <property name="suffix" value=".jpg" />
         <property name="suffix" value=".css" />
+        <property name="suffix" value=".txt" />
     </bean>
 </beans>
