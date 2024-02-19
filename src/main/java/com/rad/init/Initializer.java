@@ -10,6 +10,7 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 public class Initializer implements WebApplicationInitializer  {
 
 	public void onStartup(ServletContext servletContext) throws ServletException {
+		System.out.println("Application start up");
 		AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
 		ctx.register(WebAppConfig.class);
 		servletContext.addListener(new ContextLoaderListener(ctx));

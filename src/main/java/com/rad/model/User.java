@@ -2,6 +2,7 @@ package com.rad.model;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,15 +15,34 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@Column(name = "ID")
 	private String id;
+	
+	@Column(name = "USERNAME")
 	private String username;
+	
+	@Column(name = "PASSWORD")
 	private String password;
+	
+	@Column(name = "EMAIL")
 	private String email;
+	
+	@Column(name = "PHONENO")
 	private Long phoneNo;
+	
+	@Column(name = "NAME")
 	private String Name;
+	
+	@Column(name = "ID")
 	private Date createdDate;
+	
+	@Column(name = "ID")
 	private String createdByName;
+	
+	@Column(name = "ID")
 	private Date modifiedDate;
+	
+	@Column(name = "ID")
 	private String modifiedByName;
 
 	public String getUsername() {

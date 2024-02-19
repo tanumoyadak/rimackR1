@@ -41,8 +41,9 @@ public class WebAppConfig {
 	
 	@Bean
 	public DataSource dataSource() {
+		System.out.println("Creatnig datasource bean.");
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
-		
+		System.out.println(env.getRequiredProperty(PROPERTY_NAME_DATABASE_DRIVER));
 		dataSource.setDriverClassName(env.getRequiredProperty(PROPERTY_NAME_DATABASE_DRIVER));
 		dataSource.setUrl(env.getRequiredProperty(PROPERTY_NAME_DATABASE_URL));
 		dataSource.setUsername(env.getRequiredProperty(PROPERTY_NAME_DATABASE_USERNAME));
@@ -53,6 +54,7 @@ public class WebAppConfig {
 	
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
+		System.out.println("Creating entityManagerFactory bean.");
 		LocalContainerEntityManagerFactoryBean sessionFactoryBean = new LocalContainerEntityManagerFactoryBean();
 		sessionFactoryBean.setDataSource(dataSource());
 		sessionFactoryBean.setPackagesToScan(env.getRequiredProperty(PROPERTY_NAME_ENTITYMANAGER_PACKAGES_TO_SCAN));
@@ -62,6 +64,7 @@ public class WebAppConfig {
 	
 	@Bean
 	public JpaTransactionManager transactionManager() {
+		System.out.println("Creating transactionManager bean.");
 		JpaTransactionManager transactionManager = new JpaTransactionManager();
 		transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
 		return transactionManager;

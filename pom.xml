@@ -84,7 +84,7 @@
 			<version>42.6.0</version>
 		</dependency>
 	</dependencies>
-	<!--
+	
     <build>
 		<plugins>
 			<plugin>
@@ -99,11 +99,11 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
-				<version>3.0.0</version>
+				<version>3.4.0</version>
 				<configuration>
 					<warSourceDirectory>WebContent</warSourceDirectory>
 				</configuration>
 			</plugin>
 		</plugins>
-	</build> -->
+	</build>
 </project>
