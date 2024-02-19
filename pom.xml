@@ -9,15 +9,15 @@
 	<name>RimackWebRegs</name>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.3.2.RELEASE</spring.version>
+		<spring.version>6.1.2</spring.version>
 		<junit.version>4.12</junit.version>
 		<servlet.version>3.1.0</servlet.version>
 	</properties>
 	<dependencies>
 		<dependency>
-			<groupId>javax.persistence</groupId>
-			<artifactId>javax.persistence-api</artifactId>
-			<version>2.2</version>
+		    <groupId>jakarta.persistence</groupId>
+		    <artifactId>jakarta.persistence-api</artifactId>
+		    <version>3.1.0</version>
 		</dependency>
 		<!-- Junit -->
 		<dependency>
@@ -29,10 +29,12 @@
 
 		<!--Servlet-Api -->
 		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>${servlet.version}</version>
+		    <groupId>jakarta.servlet</groupId>
+		    <artifactId>jakarta.servlet-api</artifactId>
+		    <version>6.0.0</version>
+		    <scope>provided</scope>
 		</dependency>
+
 
 		<!-- Spring Framework -->
 		<dependency>
@@ -69,12 +71,18 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
-			<version>6.1.2</version>
+			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
-			<version>6.1.2</version>
+			<version>${spring.version}</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.hibernate.orm</groupId>
+		    <artifactId>hibernate-core</artifactId>
+		    <version>6.4.1.Final</version>
 		</dependency>
 
 		<!-- Postgre database driver -->
